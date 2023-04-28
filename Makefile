@@ -32,5 +32,8 @@ homebrew-packages:
 ~/.config/nvim:
 	git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-~/.config/tmux/tmux.conf:
+~/.config/tmux:
+	mkdir -p ~/.config/tmux
+
+~/.config/tmux/tmux.conf: ~/.config/tmux
 	ln -sf $(PWD)/tmux/tmux.conf ~/.config/tmux/tmux.conf
