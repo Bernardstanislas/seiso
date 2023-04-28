@@ -1,6 +1,8 @@
 SHELL := /bin/bash
 BREW_PACKAGES_FILE := homebrew/packages.txt
+BREW_TAPS_FILE := homebrew/taps.txt
 INSTALLED_BREW_PACKAGES := $(shell brew list)
+INSTALLED_BREW_TAPS := $(shell brew tap)
 
 install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config fisher-plugins
 
@@ -20,11 +22,20 @@ tmux-config: ~/.config/tmux/tmux.conf
 git-config:	~/.gitconfig
 
 # Install homebrew packages
-homebrew-packages:
+homebrew-packages: homebrew-taps
 	@IFS=$$'\n'; \
 	for package in $(shell cat $(BREW_PACKAGES_FILE)); do \
 		if ! echo "$(INSTALLED_BREW_PACKAGES)" | grep -w -q "$$package"; then \
 			brew install $$package; \
+		fi; \
+	done
+
+# Install homebrew taps
+homebrew-taps:
+	@IFS=$$'\n'; \
+	for tap in $(shell cat $(BREW_TAPS_FILE)); do \
+		if ! echo "$(INSTALLED_BREW_TAPS)" | grep -w -q "$$tap"; then \
+			brew tap $$tap; \
 		fi; \
 	done
 

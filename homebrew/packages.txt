@@ -1,5 +1,6 @@
 fish
 fisher
+font-hack-nerd-font
 lolcat
 neovim
 thefuck
