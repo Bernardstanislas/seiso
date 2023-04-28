@@ -52,14 +52,17 @@ fisher-plugins: ~/.config/fish/fish_plugins
 ~/.config/tmux:
 	mkdir -p ~/.config/tmux
 
+~/.config/fish:
+	mkdir -p ~/.config/fish
+
 ~/.config/tmux/tmux.conf: tmux/tmux.conf | ~/.config/tmux
 	ln -sf $(PWD)/tmux/tmux.conf ~/.config/tmux/tmux.conf
 
 ~/.gitconfig:
 	ln -sf $(PWD)/git/.gitconfig ~/.gitconfig
 
-~/.config/fish/fish_plugins: fish/config.fish | ~/.config/fish/config.fish
+~/.config/fish/fish_plugins: ~/.config/fish/config.fish
 	ln -sf $(PWD)/fish/fish_plugins ~/.config/fish/fish_plugins
 
-~/.config/fish/config.fish:
+~/.config/fish/config.fish: fish/config.fish | ~/.config/fish
 	ln -sf $(PWD)/fish/config.fish ~/.config/fish/config.fish
