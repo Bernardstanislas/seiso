@@ -3,6 +3,7 @@ fisher
 font-hack-nerd-font
 lolcat
 neovim
+starship
 thefuck
 tmux
 
