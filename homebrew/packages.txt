@@ -1,0 +1,3 @@
+lolcat
+neovim
+tmux
