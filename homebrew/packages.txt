@@ -1,3 +1,6 @@
+fish
+fisher
 lolcat
 neovim
+thefuck
 tmux

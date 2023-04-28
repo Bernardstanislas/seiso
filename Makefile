@@ -2,7 +2,7 @@ SHELL := /bin/bash
 BREW_PACKAGES_FILE := homebrew/packages.txt
 INSTALLED_BREW_PACKAGES := $(shell brew list)
 
-install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config
+install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config fisher-plugins
 
 homebrew:
 	@which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -28,6 +28,10 @@ homebrew-packages:
 		fi; \
 	done
 
+# Install my fisher plugins
+fisher-plugins: ~/.config/fish/fish_plugins
+	@fish -c "fisher update > /dev/null 2>&1"
+
 ~/.config/nvim/lua/custom:
 	ln -sf $(PWD)/nvim/lua/custom ~/.config/nvim/lua/custom
 
@@ -42,3 +46,9 @@ homebrew-packages:
 
 ~/.gitconfig:
 	ln -sf $(PWD)/git/.gitconfig ~/.gitconfig
+
+~/.config/fish/fish_plugins: fish/config.fish | ~/.config/fish/config.fish
+	ln -sf $(PWD)/fish/fish_plugins ~/.config/fish/fish_plugins
+
+~/.config/fish/config.fish:
+	ln -sf $(PWD)/fish/config.fish ~/.config/fish/config.fish
