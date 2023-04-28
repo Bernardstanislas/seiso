@@ -4,7 +4,7 @@ BREW_TAPS_FILE := homebrew/taps.txt
 INSTALLED_BREW_PACKAGES := $(shell brew list)
 INSTALLED_BREW_TAPS := $(shell brew tap)
 
-install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config fisher-plugins
+install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config fisher-plugins iterm2-config
 
 homebrew:
 	@which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -42,6 +42,10 @@ homebrew-taps:
 # Install my fisher plugins
 fisher-plugins: ~/.config/fish/fish_plugins
 	@fish -c "fisher update > /dev/null 2>&1"
+
+# Configure iterm2
+iterm2-config:
+	@defaults import com.googlecode.iterm2 iterm2/defaults.plist
 
 ~/.config/nvim/lua/custom:
 	ln -sf $(PWD)/nvim/lua/custom ~/.config/nvim/lua/custom
