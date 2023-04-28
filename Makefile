@@ -2,9 +2,7 @@ SHELL := /bin/bash
 BREW_PACKAGES_FILE := homebrew/packages.txt
 INSTALLED_BREW_PACKAGES := $(shell brew list)
 
-.PHONY: install nvchad nvim-config tmux-config homebrew-packages homebrew
-
-install: homebrew homebrew-packages nvchad nvim-config tmux-config
+install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config
 
 homebrew:
 	@which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -18,6 +16,10 @@ nvim-config: ~/.config/nvim/lua/custom
 # Copy my tmux config to ~/.config/tmux.conf
 tmux-config: ~/.config/tmux/tmux.conf
 
+# Copy my .gitconfig to ~/.gitconfig
+git-config:	~/.gitconfig
+
+# Install homebrew packages
 homebrew-packages:
 	@IFS=$$'\n'; \
 	for package in $(shell cat $(BREW_PACKAGES_FILE)); do \
@@ -35,5 +37,8 @@ homebrew-packages:
 ~/.config/tmux:
 	mkdir -p ~/.config/tmux
 
-~/.config/tmux/tmux.conf: ~/.config/tmux
+~/.config/tmux/tmux.conf: tmux/tmux.conf | ~/.config/tmux
 	ln -sf $(PWD)/tmux/tmux.conf ~/.config/tmux/tmux.conf
+
+~/.gitconfig:
+	ln -sf $(PWD)/git/.gitconfig ~/.gitconfig

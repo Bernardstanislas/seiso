@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Stanislas Bernard
+	email = bernardstanislas@gmail.com
+	signingkey = C42674A719CB03B089D322EE5AD491FB7CFFBA2C
+[push]
+	default = current
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+[core]
+	ignorecase = false
+[commit]
+	gpgsign = false
+[gpg]
+	program = gpg
