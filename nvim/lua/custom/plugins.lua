@@ -14,7 +14,7 @@ local plugins = {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
     opts = {
-      encure_installed = {
+      ensure_installed = {
         "rust-analyzer",
         "svelte-language-server",
         "typescript-language-server"
@@ -42,6 +42,20 @@ local plugins = {
       },
     },
   },
+  {
+   "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require "custom.configs.null-ls"
+    end,
+    lazy = false
+  },
+  {
+    "MunifTanjim/prettier.nvim",
+    config = function ()
+      require "custom.configs.prettier"
+    end,
+    lazy = false
+  }
 }
 
 return plugins
