@@ -1,6 +1,7 @@
 fish
 fisher
 font-hack-nerd-font
+lazygit
 lolcat
 neovim
 starship
