@@ -38,6 +38,10 @@ local plugins = {
       require "custom.configs.prettier"
     end,
     lazy = false
+  },
+  {
+    "github/copilot.vim",
+    lazy = false
   }
 }
 
