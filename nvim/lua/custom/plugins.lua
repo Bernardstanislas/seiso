@@ -42,6 +42,10 @@ local plugins = {
   {
     "github/copilot.vim",
     lazy = false
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false
   }
 }
 
