@@ -4,6 +4,7 @@ font-hack-nerd-font
 lazygit
 lolcat
 neovim
+nvm
 starship
 thefuck
 tmux

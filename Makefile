@@ -40,7 +40,7 @@ homebrew-taps:
 	done
 
 # Install my fisher plugins
-fisher-plugins: ~/.config/fish/fish_plugins
+fisher-plugins: ~/.config/fish/fish_plugins ~/.config/fish/functions/nvm.fish
 	@fish -c "fisher update > /dev/null 2>&1"
 
 # Configure iterm2
@@ -70,3 +70,6 @@ iterm2-config:
 
 ~/.config/fish/config.fish: fish/config.fish | ~/.config/fish
 	ln -sf $(PWD)/fish/config.fish ~/.config/fish/config.fish
+
+~/.config/fish/functions/nvm.fish:
+	ln -sf $(PWD)/fish/functions/nvm.fish ~/.config/fish/functions/nvm.fish
