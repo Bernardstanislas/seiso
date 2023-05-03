@@ -51,6 +51,7 @@ opt.undofile = true
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
 
+g.transparency = false
 ----------------------------- Lazy vim -----------------------------
 require "init.lazy"
 
