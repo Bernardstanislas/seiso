@@ -4,21 +4,18 @@ BREW_TAPS_FILE := homebrew/taps.txt
 INSTALLED_BREW_PACKAGES := $(shell brew list)
 INSTALLED_BREW_TAPS := $(shell brew tap)
 
-install: homebrew homebrew-packages nvchad nvim-config tmux-config git-config fisher-plugins iterm2-config
+install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config
 
 homebrew:
 	@which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# Install NvChad
-nvchad: ~/.config/nvim
+# Link my nvim config
+neovim: ~/.config/nvim
 
-# Copy my nvim config to ~/.config/nvim
-nvim-config: ~/.config/nvim/lua/custom
-
-# Copy my tmux config to ~/.config/tmux.conf
+# Link my tmux config to ~/.config/tmux.conf
 tmux-config: ~/.config/tmux/tmux.conf
 
-# Copy my .gitconfig to ~/.gitconfig
+# Link my .gitconfig to ~/.gitconfig
 git-config:	~/.gitconfig
 
 # Install homebrew packages
@@ -47,11 +44,8 @@ fisher-plugins: ~/.config/fish/fish_plugins ~/.config/fish/functions/nvm.fish
 iterm2-config:
 	@defaults import com.googlecode.iterm2 iterm2/defaults.plist
 
-~/.config/nvim/lua/custom:
-	ln -sf $(PWD)/nvim/lua/custom ~/.config/nvim/lua/custom
-
 ~/.config/nvim:
-	git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+	ln -sf $(PWD)/nvim ~/.config/nvim
 
 ~/.config/tmux:
 	mkdir -p ~/.config/tmux
