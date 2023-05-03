@@ -44,10 +44,11 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>ff", "<cmd>Telescope find_files hidden=true prompt_position=true<cr>", desc = "find files" },
+      { "<leader>ff", "<cmd>Telescope find_files hidden=true prompt_position=top<cr>", desc = "find files" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "find buffers" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "find help" },
       { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "find keymaps" },
+      { "<leader><space>", "<cmd>lua require'config.plugins.telescope'.project_files()<cr>", desc = "find project files" },
     },
   },
   {
