@@ -26,13 +26,10 @@ local plugins = {
     },
   },
   {
-    "TimUntersberger/neogit",
-    init = function ()
-      vim.keymap.set({"n", "i"}, "<Leader>gg", ":Neogit<CR>")
-    end,
-    opts = {
-      kind = "split"
-    }
+    "kdheepak/lazygit.nvim",
+    keys = {
+      { "<leader>gg", "<cmd>LazyGit<cr>", "open lazygit" },
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
