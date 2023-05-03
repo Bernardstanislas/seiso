@@ -43,6 +43,16 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+    opts = {
+      extensions = {
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
+          override_file_sorter = false,
+          case_mode = "smart_case",
+        }
+      },
+    },
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files hidden=true prompt_position=top<cr>", desc = "find files" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "find buffers" },
@@ -69,6 +79,20 @@ local plugins = {
       return require "config.plugins.cmp"
     end,
   },
+  {
+	"nvim-telescope/telescope-fzf-native.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+    build = function()
+      local job = require("plenary.job")
+      job:new({
+        command = "make",
+        cwd = vim.fn.stdpath("data") .. "/lazy/telescope-fzf-native.nvim",
+      }):sync()
+    end,
+    config = function()
+      require("telescope").load_extension("fzf")
+    end
+  }
 }
 
 return plugins
