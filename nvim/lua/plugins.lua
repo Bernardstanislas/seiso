@@ -13,7 +13,7 @@ local plugins = {
       "MunifTanjim/nui.nvim",
     },
     config = function ()
-      vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>")
+      vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>", {silent = true})
     end
   },
   {
