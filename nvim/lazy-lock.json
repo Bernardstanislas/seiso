@@ -1,5 +1,6 @@
 {
   "halcyon-neovim": { "branch": "master", "commit": "a96606b2a31b673d801fb5486740f67b3e6e5cec" },
   "lazy.nvim": { "branch": "main", "commit": "bb5cc9ef3bbb17541929b745f74551c900188099" },
-  "nvim-web-devicons": { "branch": "master", "commit": "b34362b20a4942b3245f958e73ebe1b09b020ad1" }
+  "nvim-web-devicons": { "branch": "master", "commit": "b34362b20a4942b3245f958e73ebe1b09b020ad1" },
+  "vim-dirvish": { "branch": "master", "commit": "6233243f0caa71d27d27ea102540a88bce8eb6ea" }
 }
