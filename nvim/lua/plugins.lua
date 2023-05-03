@@ -16,7 +16,8 @@ local plugins = {
       vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>")
     end
   },
-  "christoomey/vim-tmux-navigator"
+  "christoomey/vim-tmux-navigator",
+  "TimUntersberger/neogit"
 }
 
 return plugins
