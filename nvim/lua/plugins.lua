@@ -47,7 +47,20 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     event = "BufEnter",
     config = true
-  }
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    opts = function ()
+      return require "config.plugins.cmp"
+    end,
+  },
 }
 
 return plugins
