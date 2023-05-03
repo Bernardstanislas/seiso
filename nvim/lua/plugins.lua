@@ -43,6 +43,11 @@ local plugins = {
       { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "find keymaps" },
     },
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "BufEnter",
+    config = true
+  }
 }
 
 return plugins
