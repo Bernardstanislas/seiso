@@ -12,5 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Get new commits
+        run: echo "NEW_COMMIT_COUNT=$(git log --oneline --since '24 hours ago' | wc -l)" >> $GITHUB_ENV
+
       - name: Install everything
         run: make
+        if: ${{ env.NEW_COMMIT_COUNT > 0 }}
