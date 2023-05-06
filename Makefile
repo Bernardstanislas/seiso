@@ -48,13 +48,16 @@ fisher-plugins: ~/.config/fish/fish_plugins ~/.config/fish/functions/nvm.fish
 iterm2-config:
 	@defaults import com.googlecode.iterm2 iterm2/defaults.plist
 
-~/.config/nvim:
+~/.config:
+	mkdir -p ~/.config
+
+~/.config/nvim: ~/.config
 	ln -sf $(PWD)/nvim ~/.config/nvim
 
-~/.config/tmux:
+~/.config/tmux: ~/.config
 	mkdir -p ~/.config/tmux
 
-~/.config/fish:
+~/.config/fish: ~/.config
 	mkdir -p ~/.config/fish
 
 ~/.config/tmux/tmux.conf: tmux/tmux.conf | ~/.config/tmux
