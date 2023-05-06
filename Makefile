@@ -1,13 +1,15 @@
 SHELL := /bin/bash
 BREW_PACKAGES_FILE := homebrew/packages.txt
 BREW_TAPS_FILE := homebrew/taps.txt
-INSTALLED_BREW_PACKAGES := $(shell brew list)
-INSTALLED_BREW_TAPS := $(shell brew tap)
+
+.PHONY: homebrew
 
 install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config
 
-homebrew:
-	@which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/opt/homebrew/bin/brew:
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
+
+homebrew: /opt/homebrew/bin/brew
 
 # Link my nvim config
 neovim: ~/.config/nvim
@@ -20,6 +22,7 @@ git-config:	~/.gitconfig
 
 # Install homebrew packages
 homebrew-packages: homebrew-taps
+	$(eval INSTALLED_BREW_PACKAGES=$(shell brew list))
 	@IFS=$$'\n'; \
 	for package in $(shell cat $(BREW_PACKAGES_FILE)); do \
 		if ! echo "$(INSTALLED_BREW_PACKAGES)" | grep -w -q "$$package"; then \
@@ -29,6 +32,7 @@ homebrew-packages: homebrew-taps
 
 # Install homebrew taps
 homebrew-taps:
+	$(eval INSTALLED_BREW_TAPS=$(shell brew tap))
 	@IFS=$$'\n'; \
 	for tap in $(shell cat $(BREW_TAPS_FILE)); do \
 		if ! echo "$(INSTALLED_BREW_TAPS)" | grep -w -q "$$tap"; then \
