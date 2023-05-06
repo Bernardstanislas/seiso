@@ -66,4 +66,5 @@ iterm2-config:
 	ln -sf $(PWD)/fish/config.fish ~/.config/fish/config.fish
 
 ~/.config/fish/functions/nvm.fish:
+	mkdir -p ~/.config/fish/functions
 	ln -sf $(PWD)/fish/functions/nvm.fish ~/.config/fish/functions/nvm.fish
