@@ -4,7 +4,7 @@ BREW_TAPS_FILE := homebrew/taps.txt
 
 .PHONY: homebrew
 
-install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config
+install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config karabiner-config
 
 /opt/homebrew/bin/brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
@@ -48,6 +48,9 @@ fisher-plugins: ~/.config/fish/fish_plugins ~/.config/fish/functions/nvm.fish
 iterm2-config:
 	@defaults import com.googlecode.iterm2 iterm2/defaults.plist
 
+# Link my kara config
+karabiner-config: ~/.config/karabiner
+
 ~/.config:
 	mkdir -p ~/.config
 
@@ -75,3 +78,9 @@ iterm2-config:
 ~/.config/fish/functions/nvm.fish:
 	mkdir -p ~/.config/fish/functions
 	ln -sf $(PWD)/fish/functions/nvm.fish ~/.config/fish/functions/nvm.fish
+
+~/.config/karabiner: ~/.config
+	mkdir -p ~/.config/karabiner
+	mkdir -p ~/.config/karabiner/assets
+	ln -sf $(PWD)/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+	ln -sf $(PWD)/karabiner/complex_modifications ~/.config/karabiner/assets/complex_modifications
