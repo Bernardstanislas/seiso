@@ -9,7 +9,7 @@ APPLICATION_SUPPORT := ~/Library/Application\ Support
 install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config karabiner-config
 
 # Install homebrew
-homebrew: /opt/homebrew/bin/brew
+homebrew: /usr/local/bin/brew
 
 # Link my nvim config
 neovim: $(CONFIG)/nvim
@@ -62,7 +62,7 @@ osx-config:
 
 # ----------------------------------------------------------------------------
 
-/opt/homebrew/bin/brew:
+/usr/local/bin/brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 
 $(CONFIG):
