@@ -54,6 +54,9 @@ karabiner-config: $(CONFIG)/karabiner
 # Link my spectacle config
 spectacle-config: $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
 
+# Configure the system
+osx-config:
+	sudo ./osx.sh
 
 
 
