@@ -3,4 +3,5 @@ return {
 	opts = {
 		background_colour = "#000000",
 	},
+	enabled = false,
 }
