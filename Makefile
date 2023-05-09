@@ -1,6 +1,4 @@
 SHELL := /bin/bash
-BREW_PACKAGES_FILE := homebrew/packages.txt
-BREW_TAPS_FILE := homebrew/taps.txt
 CONFIG := ~/.config
 APPLICATION_SUPPORT := ~/Library/Application\ Support
 
@@ -21,14 +19,8 @@ tmux-config: $(CONFIG)/tmux/tmux.conf
 git-config: ~/.gitconfig
 
 # Install homebrew packages
-homebrew-packages: homebrew-taps
-	$(eval INSTALLED_BREW_PACKAGES=$(shell brew list))
-	@IFS=$$'\n'; \
-	for package in $(shell cat $(BREW_PACKAGES_FILE)); do \
-		if ! echo "$(INSTALLED_BREW_PACKAGES)" | grep -w -q "$$package"; then \
-			brew install $$package; \
-		fi; \
-	done
+homebrew-packages:
+	brew bundle --file $(PWD)/homebrew/Brewfile
 
 # Install homebrew taps
 homebrew-taps:
@@ -56,7 +48,7 @@ spectacle-config: $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
 
 # Configure the system
 osx-config:
-	sudo ./osx.sh
+	sudo $(PWD)/osx.sh
 
 
 
@@ -103,4 +95,4 @@ $(APPLICATION_SUPPORT)/Spectacle:
 	mkdir -p $(APPLICATION_SUPPORT)/Spectacle
 
 $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json: $(APPLICATION_SUPPORT)/Spectacle
-	ln -sf spectacle/Shortcuts.json $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
+	ln -sf $(PWD)/spectacle/Shortcuts.json $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
