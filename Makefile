@@ -4,7 +4,7 @@ APPLICATION_SUPPORT := ~/Library/Application\ Support
 
 .PHONY: homebrew
 
-install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config karabiner-config
+install: homebrew homebrew-packages neovim tmux-config git-config fisher-plugins iterm2-config karabiner-config kitty-config osx-config
 
 # Install homebrew
 homebrew: /usr/local/bin/brew
@@ -50,6 +50,8 @@ spectacle-config: $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
 osx-config:
 	sudo $(PWD)/osx.sh
 
+# Link my Kitty configuration
+kitty-config: $(CONFIG)/kitty
 
 
 # ----------------------------------------------------------------------------
@@ -96,3 +98,6 @@ $(APPLICATION_SUPPORT)/Spectacle:
 
 $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json: $(APPLICATION_SUPPORT)/Spectacle
 	ln -sf $(PWD)/spectacle/Shortcuts.json $(APPLICATION_SUPPORT)/Spectacle/Shortcuts.json
+
+$(CONFIG)/kitty:
+	ln -sf $(PWD)/kitty $(CONFIG)/kitty
