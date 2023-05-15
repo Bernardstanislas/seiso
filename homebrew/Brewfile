@@ -41,6 +41,7 @@ brew "thefuck"
 brew "tldr"
 brew "tmux"
 
+cask "1password-cli"
 cask "1password", args: { appdir: "/Applications" }
 cask "alfred", args: { appdir: "/Applications" }
 cask "blender"

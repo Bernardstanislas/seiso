@@ -33,7 +33,7 @@ homebrew-taps:
 	done
 
 # Install my fisher plugins
-fisher-plugins: $(CONFIG)/fish/fish_plugins $(CONFIG)/fish/functions/nvm.fish
+fisher-plugins: $(CONFIG)/fish/fish_plugins $(CONFIG)/fish/functions
 	@fish -c "fisher update > /dev/null 2>&1"
 
 # Configure iterm2
@@ -83,9 +83,8 @@ $(CONFIG)/fish/fish_plugins: $(CONFIG)/fish/config.fish
 $(CONFIG)/fish/config.fish: fish/config.fish | $(CONFIG)/fish
 	ln -sf $(PWD)/fish/config.fish $(CONFIG)/fish/config.fish
 
-$(CONFIG)/fish/functions/nvm.fish:
-	mkdir -p $(CONFIG)/fish/functions
-	ln -sf $(PWD)/fish/functions/nvm.fish $(CONFIG)/fish/functions/nvm.fish
+$(CONFIG)/fish/functions:
+	ln -sf $(PWD)/fish/functions $(CONFIG)/fish/functions
 
 $(CONFIG)/karabiner: $(CONFIG)
 	mkdir -p $(CONFIG)/karabiner

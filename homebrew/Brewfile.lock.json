@@ -8,7 +8,7 @@
         "revision": "6b01bd338af95db59f1d6db87ebf6416d7518297"
       },
       "homebrew/cask": {
-        "revision": "80d259cc121cb875c77865dbd5b2f6c77320da98"
+        "revision": "1d8d3adefa7425f04b760511d4b3ba1573d38abc"
       },
       "homebrew/cask-fonts": {
         "revision": "05f1237ea49f7bea85cce74fe3a66c97755585f8"
@@ -17,7 +17,7 @@
         "revision": "09417e3dae232d2a115d9b299c4c9e58180a21e9"
       },
       "homebrew/core": {
-        "revision": "fd36a7664a20aa17f26c7cf3c5712ed0600c9c0b"
+        "revision": "8158b4dc0cdf613fadc538c7b3c25f0e1e8462d6"
       },
       "homebrew/services": {
         "revision": "507510e783fe37293220253caff0d76f72c5daed"
@@ -1507,7 +1507,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.10.760,52970952,1110",
+        "version": "1.2.10.760,52970952,1108",
         "options": {
           "args": {
             "appdir": "/Applications"
@@ -1562,6 +1562,12 @@
         "options": {
           "full_name": "kitty"
         }
+      },
+      "1password-cli": {
+        "version": "2.17.0",
+        "options": {
+          "full_name": "1password-cli"
+        }
       }
     }
   },
@@ -1574,6 +1580,14 @@
         "CLT": "14.3.0.0.1.1679647830",
         "Xcode": "14.3",
         "macOS": "13.3.1"
+      },
+      "monterey": {
+        "HOMEBREW_VERSION": "4.0.18",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "api",
+        "CLT": "14.2.0.0.1.1668646533",
+        "Xcode": "14.2",
+        "macOS": "12.6.5"
       }
     }
   }
