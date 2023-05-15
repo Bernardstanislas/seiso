@@ -7,4 +7,14 @@ return {
 			end
 		end,
 	},
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			servers = {
+				terraformls = {
+					filetypes = { "terraform", "hcl", "tf" },
+				},
+			},
+		},
+	},
 }
