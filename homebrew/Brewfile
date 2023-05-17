@@ -46,6 +46,7 @@ cask "1password", args: { appdir: "/Applications" }
 cask "alfred", args: { appdir: "/Applications" }
 cask "blender"
 cask "burp-suite"
+cask "cleanmymac"
 cask "docker", args: { appdir: "/Applications" }
 cask "font-hack-nerd-font"
 cask "gather", args: { appdir: "/Applications" }

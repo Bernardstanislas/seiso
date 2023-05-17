@@ -5,7 +5,7 @@
         "revision": "7713383db6de1631fb8cad1c50d70b506d81c578"
       },
       "homebrew/bundle": {
-        "revision": "6b01bd338af95db59f1d6db87ebf6416d7518297"
+        "revision": "ab014794c2dc14b1179de68f960479d898c5bc22"
       },
       "homebrew/cask": {
         "revision": "1d8d3adefa7425f04b760511d4b3ba1573d38abc"
@@ -14,7 +14,7 @@
         "revision": "05f1237ea49f7bea85cce74fe3a66c97755585f8"
       },
       "homebrew/cask-versions": {
-        "revision": "09417e3dae232d2a115d9b299c4c9e58180a21e9"
+        "revision": "6d6b48ec88abe5d4785006c3e1512b16d6818f65"
       },
       "homebrew/core": {
         "revision": "8158b4dc0cdf613fadc538c7b3c25f0e1e8462d6"
@@ -1459,7 +1459,7 @@
         }
       },
       "insomnia": {
-        "version": "2023.2.0",
+        "version": "2023.2.1",
         "options": {
           "args": {
             "appdir": "/Applications"
@@ -1507,7 +1507,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.10.760,52970952,1108",
+        "version": "1.2.11.916,eb595a67,2517",
         "options": {
           "args": {
             "appdir": "/Applications"
@@ -1564,9 +1564,15 @@
         }
       },
       "1password-cli": {
-        "version": "2.17.0",
+        "version": "2.18.0",
         "options": {
           "full_name": "1password-cli"
+        }
+      },
+      "cleanmymac": {
+        "version": "4.13.4",
+        "options": {
+          "full_name": "cleanmymac"
         }
       }
     }
