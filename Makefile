@@ -20,7 +20,7 @@ git-config: ~/.gitconfig
 
 # Install homebrew packages
 homebrew-packages:
-	brew bundle --file $(PWD)/homebrew/Brewfile
+	brew bundle --file $(PWD)/homebrew/Brewfile --no-upgrade
 
 # Install homebrew taps
 homebrew-taps:
