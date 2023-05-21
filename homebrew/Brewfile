@@ -33,6 +33,7 @@ brew "lolcat"
 brew "neovim"
 brew "nginx"
 brew "nmap"
+brew "node@18"
 brew "nvm"
 brew "pipenv"
 brew "starship"
@@ -47,6 +48,7 @@ cask "alfred", args: { appdir: "/Applications" }
 cask "blender"
 cask "burp-suite"
 cask "cleanmymac"
+cask "cleanshot"
 cask "docker", args: { appdir: "/Applications" }
 cask "font-hack-nerd-font"
 cask "gather", args: { appdir: "/Applications" }
@@ -56,11 +58,13 @@ cask "iterm2", args: { appdir: "/Applications" }
 cask "karabiner-elements", args: { appdir: "/Applications" }
 cask "kitty"
 cask "kiwix"
+cask "raycast"
 cask "remarkable"
 cask "spectacle", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
 cask "stremio", args: { appdir: "/Applications" }
 cask "tableplus", args: { appdir: "/Applications" }
 cask "tor-browser", args: { appdir: "/Applications" }
+cask "utm"
 cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "zoom"

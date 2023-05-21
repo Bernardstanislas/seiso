@@ -3,6 +3,9 @@ if status is-interactive
 end
 
 export PATH="$PATH:/Users/stan/.cargo/bin"
+export PATH="$PATH:/Users/stan/Library/Python/3.11/bin"
+export PATH="$PATH:/usr/local/opt/node@18/bin"
+
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 thefuck --alias | source
