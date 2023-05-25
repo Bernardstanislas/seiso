@@ -1,8 +1,4 @@
 return {
 	"mini.animate",
-	opts = {
-		cursor = {
-			enable = false,
-		},
-	},
+	enabled = false,
 }
