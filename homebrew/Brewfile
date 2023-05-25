@@ -58,6 +58,7 @@ cask "iterm2", args: { appdir: "/Applications" }
 cask "karabiner-elements", args: { appdir: "/Applications" }
 cask "kitty"
 cask "kiwix"
+cask "neovide"
 cask "raycast"
 cask "remarkable"
 cask "spectacle", args: { appdir: "/Applications" }
