@@ -1,5 +1,17 @@
 # Seiso: Mac Provisioning for the Lean Developer
 
+## Fresh install? No problem!
+
+- invert scrolling direction
+- manual install of 1Password
+- setup 1Password
+- setup the SSH Agent in the 1Password settings
+- login to Google account in Safari to unlock any Wifi stuff
+- `xcode-select --install`
+- install [homebrew](https://brew.sh/)
+- `mkdir -p ~/code && cd ~/code`
+- `git clone git@github.com:Bernardstanislas/seiso.git`
+
 Welcome to Seiso, a powerful and efficient repository designed to streamline the provisioning process of your Mac environment.
 
 Inspired by the Lean methodology's 5S principle, Seiso aims to create a clean, organized, and well-maintained development environment that will help you optimize your workflow and boost productivity.
