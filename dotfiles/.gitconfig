@@ -1,0 +1,21 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	name = Stanislas Bernard
+	email = bernardstanislas@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILhpogNtxnfHfbqqAJ8L0PqXtZNX+29saEJZLBFeCtoB
+[push]
+	default = current
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+[core]
+	ignorecase = false
+[init]
+	defaultBranch = main

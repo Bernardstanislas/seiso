@@ -20,30 +20,10 @@
 - `/opt/homebrew/bin/stow -t $HOME dotfiles`
 - relaunch the terminal
 - `ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions`
+- `brew bundle --file homebrew/Brewfile`
+- enable ICloud from the settings
+- download and install Arc from your emails
+- `defaults write com.apple.dock "static-only" -bool "true" && killall Dock`
+- `defaults write com.apple.dock "autohide" -bool "true" && killall Dock`
+- `stow -t ~/Library/Application\ Support/Spectacle spectacle`
 
-Welcome to Seiso, a powerful and efficient repository designed to streamline the provisioning process of your Mac environment.
-
-Inspired by the Lean methodology's 5S principle, Seiso aims to create a clean, organized, and well-maintained development environment that will help you optimize your workflow and boost productivity.
-
-## A Lean Approach to Mac Provisioning
-
-Seiso embodies the principles of Lean methodology, particularly its emphasis on eliminating waste, improving efficiency, and fostering a culture of continuous improvement.
-
-The name "Seiso" is derived from the Japanese term for "cleaning" or "shine," one of the 5S components in Lean methodology.
-
-It serves as a reminder to always maintain a tidy and clutter-free development environment.
-
-## Features
-
-Seiso offers a variety of features to help you set up and configure your Mac in a lean and efficient manner:
-
-- Automated installation: Easily install essential software, tools, and packages with a single command, saving you time and effort.
-- Consistent configuration: Ensure a uniform development environment by applying consistent settings and configurations across your system.
-- Version control: Keep your environment up-to-date and in sync with the latest tool versions and configurations, minimizing potential issues and discrepancies.
-
-## Usage
-
-```bash
-make
-make osx-config
-```

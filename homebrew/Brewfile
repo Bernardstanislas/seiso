@@ -36,3 +36,5 @@ brew "tldr"
 brew "tmux"
 
 cask "1password-cli"
+cask "visual-studio-code"
+cask "spectacle"
