@@ -1578,9 +1578,6 @@
       "spectacle": {
         "version": "1.2,672",
         "options": {
-          "args": {
-            "appdir": "/Applications"
-          },
           "full_name": "spectacle"
         }
       },
@@ -1621,11 +1618,8 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.78.2",
+        "version": "1.87.2",
         "options": {
-          "args": {
-            "appdir": "/Applications"
-          },
           "full_name": "visual-studio-code"
         }
       },
@@ -1675,6 +1669,12 @@
         "version": "0.10.4",
         "options": {
           "full_name": "neovide"
+        }
+      },
+      "warp": {
+        "version": "0.2024.03.12.08.02.stable_01",
+        "options": {
+          "full_name": "warp"
         }
       }
     }
