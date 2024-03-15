@@ -3,3 +3,4 @@ if status is-interactive
 end
 
 fish_add_path /opt/homebrew/bin
+source ~/.asdf/asdf.fish
