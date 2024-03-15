@@ -26,4 +26,7 @@
 - `defaults write com.apple.dock "static-only" -bool "true" && killall Dock`
 - `defaults write com.apple.dock "autohide" -bool "true" && killall Dock`
 - `stow -t ~/Library/Application\ Support/Spectacle spectacle`
-
+- `asdf plugin add kubectx`
+- `asdf plugin add kubectl`
+- `asdf plugin add nodejs`
+- `asdf install`

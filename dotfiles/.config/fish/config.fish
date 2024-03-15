@@ -13,3 +13,5 @@ alias vim=nvim
 alias lg="lazygit"
 
 [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
+
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
