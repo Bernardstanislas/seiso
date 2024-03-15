@@ -11,6 +11,14 @@
 - install [homebrew](https://brew.sh/)
 - `mkdir -p ~/code && cd ~/code`
 - `git clone git@github.com:Bernardstanislas/seiso.git`
+- install [ASDF](https://asdf-vm.com/)
+- `/opt/homebrew/bin/brew install fish`
+- `sudo vim /etc/shells` and add `/opt/homebrew/bin/fish`
+- `chsh -s /opt/homebrew/bin/fish`
+- `/opt/homebrew/bin/brew install stow`
+- `rm -r ~/.config`
+- `/opt/homebrew/bin/stow -t $HOME dotfiles`
+- relaunch the terminal
 
 Welcome to Seiso, a powerful and efficient repository designed to streamline the provisioning process of your Mac environment.
 
