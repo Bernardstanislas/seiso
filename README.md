@@ -19,6 +19,7 @@
 - `rm -r ~/.config`
 - `/opt/homebrew/bin/stow -t $HOME dotfiles`
 - relaunch the terminal
+- `ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions`
 
 Welcome to Seiso, a powerful and efficient repository designed to streamline the provisioning process of your Mac environment.
 
