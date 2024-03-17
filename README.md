@@ -33,3 +33,4 @@
 - `asdf plugin add k9s`
 - `asdf plugin add gcloud https://github.com/Bernardstanislas/asdf-gcloud.git` -> this is a temporary fork to fix an issue with the base repository, fix this line when the base repository is fixed
 - `asdf install`
+- `terraform -install-autocomplete`
