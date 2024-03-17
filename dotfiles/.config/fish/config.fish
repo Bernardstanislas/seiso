@@ -12,6 +12,7 @@ starship init fish | source
 alias vim=nvim
 alias lg="lazygit"
 alias k="kubectl"
+alias tf="terraform"
 
 [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
