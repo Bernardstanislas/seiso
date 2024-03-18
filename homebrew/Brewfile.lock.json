@@ -11,10 +11,10 @@
         "revision": "1d8d3adefa7425f04b760511d4b3ba1573d38abc"
       },
       "homebrew/cask-fonts": {
-        "revision": "085b3e19ee9217d23789ddfbd3d0551e93b90c23"
+        "revision": "44a579d41aa4295a9bfa71c197e997eca9a6d72b"
       },
       "homebrew/cask-versions": {
-        "revision": "3c17a8aa8d075075b6cc9f5b3287e55a81fbd5da"
+        "revision": "4134baf7d7ef227c3db1294ae97dc30b8d05a184"
       },
       "homebrew/core": {
         "revision": "8158b4dc0cdf613fadc538c7b3c25f0e1e8462d6"
@@ -1626,11 +1626,8 @@
         }
       },
       "spotify": {
-        "version": "1.2.11.916,eb595a67,2517",
+        "version": "1.2.33.1039,8ddb5918,3097",
         "options": {
-          "args": {
-            "appdir": "/Applications"
-          },
           "full_name": "spotify"
         }
       },
@@ -1698,7 +1695,7 @@
         }
       },
       "raycast": {
-        "version": "1.52.0",
+        "version": "1.69.3",
         "options": {
           "full_name": "raycast"
         }
@@ -1754,12 +1751,12 @@
         "macOS": "12.6.5"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.12",
+        "HOMEBREW_VERSION": "4.2.13",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
         "Xcode": "15.1",
-        "macOS": "14.3"
+        "macOS": "14.4"
       }
     }
   }
