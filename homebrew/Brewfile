@@ -39,6 +39,7 @@ brew "tmux"
 
 cask "1password-cli"
 cask "cursor"
+cask "karabiner-elements"
 cask "orbstack"
 cask "raycast"
 cask "spectacle"
